@@ -74,7 +74,12 @@ react-redux 提供了一对兄弟 Provider、connect。Provider是一个顶层�
         }
     }
 
-    /* dispatch是用来发射action的，store接收到对应的action就用去调用reducer改变state。mapDispatchToProps的作用是把dispatch(action)映射到组件的props的，这样在组件中就可以通过props来发射改变state的命令了。在这里组件通过props.actions来接收所有的dispatch。需要注意的是props.actions下面的属性(key)是和actionCreators的函数名一致的，例如 this.props.actions.add 是正确的，但是 this.props.actions.ADD 就undefined了。
+    /* dispatch是用来发射action的，store接收到对应的action就用去调用
+    reducer改变state。mapDispatchToProps的作用是把dispatch(action)映射
+    到组件的props的，这样在组件中就可以通过props来发射改变state的命令了。
+    在这里组件通过props.actions来接收所有的dispatch。
+    需要注意的是props.actions下面的属性(key)是和actionCreators的函数名一致的，
+    例如 this.props.actions.add 是正确的，但是 this.props.actions.ADD 就undefined了。
     */
 
     function mapDispatchToProps() {
