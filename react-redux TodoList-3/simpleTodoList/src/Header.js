@@ -19,6 +19,7 @@ class Header extends React.Component {
       let text = target.value.trim()
       if (text !== '') {
         this.props.actions.addTodo(text)
+        e.target.value = ''
       }
     }
 
@@ -27,7 +28,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <input onKeyDown={this.onAddTodo}/>
+        <input onKeyDown={this.onAddTodo} placeholder="请输入代办事项，回车"/>
       </div>
     )
   }

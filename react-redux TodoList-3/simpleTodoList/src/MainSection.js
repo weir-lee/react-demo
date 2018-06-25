@@ -6,17 +6,53 @@ import {
   bindActionCreators,
   dispatch
 } from 'redux'
-import * as actions from './actions/index.js'
+import VisibleListItem from './VisibleListItem'
+import * as actionTypes from './constants/actionTypes.js'
 
 class MainSection extends React.Component {
+  constructor({
+    todos,
+    filterType
+  }) {
+    super()
+  }
+
+  filterTodos() {
+    let props = this.props
+
+    switch (props.filterType) {
+      case actionTypes.SHOW_ALL:
+        return props.todos;
+        break;
+
+      case actionTypes.SHOW_COMPLETED:
+        return props.todos.filter(todo => {
+          return todo.completed
+        });
+        break;
+
+      case actionTypes.SHOW_NOT_COMPLETED:
+        return props.todos.filter(todo => {
+          return !todo.completed
+        });
+        break;
+
+      default:
+        return props.todos;
+        break;
+    }
+    props.todos.filter(todo)
+  }
+
   render() {
+    let todoList = this.filterTodos()
+
     return (
       <div>
-        <p>{JSON.stringify(this.props.todos)}</p>
-        <ul>
+        <ul class="todolist">
           {
-            this.props.todos.map((todo) => {
-                return <li>{todo.text}</li>
+            todoList.map((todo) => {
+                return <VisibleListItem item={todo} />
             })
           }
         </ul>
@@ -27,14 +63,9 @@ class MainSection extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    todos: state
+    todos: state.todos,
+    filterType: state.filterType
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MainSection)
+export default connect(mapStateToProps, null)(MainSection)

@@ -4,15 +4,15 @@ import MainSection from './MainSection.js'
 import Footer from './Footer.js'
 
 class App extends React.Component {
-    render() {
-        return (
-            <div>
-              <Header></Header>
-              <MainSection></MainSection>
-              <Footer></Footer>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="todolist-wrap">
+        <Header></Header>
+        <MainSection></MainSection>
+        <Footer></Footer>
+      </div>
+    )
+  }
 }
 
 export default App
