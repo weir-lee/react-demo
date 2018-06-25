@@ -1,0 +1,46 @@
+ul li {
+  list-style: none;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: ' ';
+  clear: both;
+}
+
+.todolist-wrap {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.todolist li.completed {
+  text-decoration: line-through;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.show-inline {
+  display: inline-block;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.footer button.active {
+  background: orange;
+}

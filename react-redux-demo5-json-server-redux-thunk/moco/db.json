@@ -1,0 +1,35 @@
+{
+  "posts": [{
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }],
+  "profile": {
+    "name": "typicode"
+  },
+  "getTodos": {
+    "todos": [{
+      "id": 0,
+      "text": "吃饭",
+      "completed": true
+    }, {
+      "id": "1",
+      "text": "睡觉",
+      "completed": false
+    }, {
+      "id": 2,
+      "text": "学习",
+      "completed": false
+    }, {
+      "id": 3,
+      "text": "健身",
+      "completed": true
+    }]
+  }
+
+}
