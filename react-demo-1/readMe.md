@@ -7,6 +7,10 @@ npm install --save-dev webpack webpack-cli webpack-dev-server
     "build": "webpack --config=./build/webpack.config.prod.js"
 }
 
+npm run dev
+
+npm run build
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,6 +30,6 @@ npm install --save-dev webpack webpack-cli webpack-dev-server
 
 开发环境的配置请参考 ./build/webpack.config.dev.js
 
-生产环境的配置请参考 /build/webpack.config.prod.js
+生产环境的配置请参考 ./build/webpack.config.prod.js
 
 ### 另外请注意webpack版本，1和2 +的配置是不同的
