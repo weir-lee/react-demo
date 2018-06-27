@@ -10,4 +10,4 @@ export const SHOW_ALL = 'SHOW_ALL'
 export const SHOW_COMPLETED = 'SHOW_COMPLETED'
 export const SHOW_NOT_COMPLETED = 'SHOW_NOT_COMPLETED'
 
-export const GET_REMOTE_TODOS = 'GET_REMOTE_TODOS'
+export const INIT_TODOS = 'INIT_TODOS'

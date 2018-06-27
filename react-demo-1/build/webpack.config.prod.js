@@ -1,9 +1,11 @@
 let path = require('path')
 
 module.exports = {
-  entry: './app/main.js',
+  mode: 'production',
+
+  entry: path.resolve(__dirname, '../app/main.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'all.js'
   },
 

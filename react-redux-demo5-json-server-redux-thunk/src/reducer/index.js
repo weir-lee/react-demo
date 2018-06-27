@@ -6,7 +6,7 @@ let initState = {
 
 export default function reducer(state = initState, action) {
   switch (action.type) {
-    case actionTypes.GET_REMOTE_TODOS:
+    case actionTypes.INIT_TODOS:
       return { ...state,
         todos: action.todos
       };

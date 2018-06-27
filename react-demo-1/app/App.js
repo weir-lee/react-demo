@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class App extends React.Component {
   render() {
     return (
-      <h1>我是react</h1>
+      <h1>哈哈哈哈，开发环境安装好啦！真棒！</h1>
     )
   }
 }

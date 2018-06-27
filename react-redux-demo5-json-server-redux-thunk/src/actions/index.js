@@ -27,20 +27,18 @@ export const setFilterType = (filterType) => ({
   filterType
 })
 
-export const getRemoteTodos = (todos) => ({
-  type: actionTypes.GET_REMOTE_TODOS,
+export const initTodos = (todos) => ({
+  type: actionTypes.INIT_TODOS,
   todos
 })
 
 export const asyncGetRemoteTodos = () => {
-  console.log('asyncGetRemoteTodos')
   return (dispatch, getState) => {
     $.ajax({
       type: 'get',
       url: 'http://localhost:9000/getTodos'
     }).done((res) => {
-      console.log(res)
-      dispatch(getRemoteTodos(res.todos))
+      dispatch(initTodos(res.todos))
     }).fail()
 
   }

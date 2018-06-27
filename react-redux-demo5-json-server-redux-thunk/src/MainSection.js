@@ -49,6 +49,7 @@ class MainSection extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount')
+    console.log(this.props)
     this.props.dispatch(actions.asyncGetRemoteTodos())
   }
 
